@@ -1,0 +1,11 @@
+!searchGold.
+//!printPos.
+
++!printPos: pos(X,Y) <- .println("Moje pozice x:",X," y:",Y).
++!searchGold: gold(X,Y) <- .print("Vidim zlato na pozici x: ",X," y: ",Y).
+//+!searchGold: moves_left(0) <- do(skip).
++!searchGold: pos(X ,Y) <-
+  Z > 0;
+  .print("Nevidim zlato bloudim dal, pozice : ",X," y:", Y);
+  do(down);
+  !searchGold.
